@@ -40,3 +40,4 @@ def load_data():
     return df
 
 data = load_data()
+st.write("hello")
