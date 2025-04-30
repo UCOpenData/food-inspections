@@ -1,11 +1,11 @@
 import pandas as pd
 import os
 import zipfile
-import folium
+#import folium
 import streamlit as st
-from streamlit_folium import folium_static
-import matplotlib.pyplot as plt
-import seaborn as sns
+#from streamlit_folium import folium_static
+#import matplotlib.pyplot as plt
+#import seaborn as sns
 from kaggle.api.kaggle_api_extended import KaggleApi
 st.set_page_config(
     page_title="Chicago Food Inspection data",
