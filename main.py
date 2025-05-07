@@ -41,7 +41,7 @@ def load_data():
 
 data = load_data()
 fail_hydepark = data[(data['Results'] == 'Fail') & (data["Zip"] == 60615)]
-rates = (data.groupby('Results').size() / data.shape[0] ) * 100
+rates = (data.groupby('Results').size().to_frame('Percentage') / data.shape[0] ) * 100
 st.write("hello")
 st.write(rates)
 st.write(fail_hydepark.head(50))
