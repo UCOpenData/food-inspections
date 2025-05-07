@@ -41,4 +41,4 @@ def load_data():
 
 data = load_data()
 st.write("hello")
-st.write(data.head())
+st.write(data.head(50))
