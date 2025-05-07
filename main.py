@@ -40,6 +40,8 @@ def load_data():
     return df
 
 data = load_data()
-fail = data[(data['Results'] == 'Fail') & (data["Zip"] == 60615)]
+fail_hydepark = data[(data['Results'] == 'Fail') & (data["Zip"] == 60615)]
+rates = data.groupby('Results').size() / data.shape[0]
 st.write("hello")
+st.write(rates)
 st.write(fail.head(50))
