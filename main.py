@@ -29,11 +29,11 @@ def load_data():
     
     api.dataset_download_files(dataset_identifier, path=DATA_DIR, unzip=True)
 
-    #path = 'Food_Inspections_-_7_1_2018_-_Present_20250430.csv'
+    
     path = os.path.join(DATA_DIR, 'Food_Inspections_-_7_1_2018_-_Present_20250430.csv')
 
    
-    #crash_pd = pd.read_csv(crash_path)
+    
     df = pd.read_csv(path)
 
 
@@ -41,3 +41,4 @@ def load_data():
 
 data = load_data()
 st.write("hello")
+st.write(data.head())
