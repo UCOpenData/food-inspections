@@ -3,3 +3,4 @@ streamlit
 folium
 streamlit-folium
 kaggle
+kaggle.api.kaggle_api_extended
