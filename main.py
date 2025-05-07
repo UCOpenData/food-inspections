@@ -40,6 +40,6 @@ def load_data():
     return df
 
 data = load_data()
-fail = data[data['RESULT'] == 'Fail']
+#fail = data[data['RESULT'] == 'Fail']
 st.write("hello")
-st.write(fail.head(50))
+st.write(data.head(50))
