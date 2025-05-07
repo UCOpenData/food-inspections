@@ -44,4 +44,5 @@ fail_hydepark = data[(data['Results'] == 'Fail') & (data["Zip"] == 60615)]
 rates = (data.groupby('Results').size().to_frame('Percentage') / data.shape[0] ) * 100
 st.write("hello")
 st.write(rates)
+search_query = st.text_input("Enter a business  name:", None)
 st.write(fail_hydepark.head(50))
