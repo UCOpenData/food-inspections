@@ -40,9 +40,13 @@ def load_data():
     return df
 
 data = load_data()
-fail_hydepark = data[(data['Results'] == 'Fail') & ((data["Zip"] == 60615) | (data["Zip"] == 60637))]
+zipcodes = sorted(data['Zip'].dropna().unique())
+selected_zips = st.sidebar.multiselect("Select ", options=zipcodes, default=[60615, 60637]  )
+failed = data[(data['Results'] == 'Fail') & ((data["Zip"].isin(selected_zips)))]
 rates = (data.groupby('Results').size().to_frame('Percentage') / data.shape[0] ) * 100
 st.write("hello")
 st.write(rates)
 search_query = st.text_input("Enter a business  name:", None)
-st.write(fail_hydepark.head(200))
+st.write(failed)
+
+
